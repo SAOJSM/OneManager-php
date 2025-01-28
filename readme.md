@@ -136,17 +136,3 @@ B:
 ### foot.omf
 
   it will showed at top or bottom as html (javascript works!). 
-
-----
-
-# A cup of coffee
-
-  https://paypal.me/qkqpttgf  
-
------
-
-# Chat
-
-### Telegram Group
-
-  https://t.me/joinchat/I_RVc0bqxuxlT-d0cO7ozw  

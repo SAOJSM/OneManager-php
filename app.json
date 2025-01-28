@@ -1,0 +1,13 @@
+{
+  "name": "OneManager",
+  "description": "Deploy OneManager to heroku",
+  "website": "https://github.com/SAOJSM/OneManager-php",
+  "repository": "https://github.com/SAOJSM/OneManager-php",
+  "success_url": "/",
+  "env": {
+    "ONEMANAGER_CONFIG_SAVE": {
+      "description": "Set how to save config: env or file",
+      "value": "env"
+    }
+  }
+}

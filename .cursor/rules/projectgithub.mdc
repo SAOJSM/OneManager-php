@@ -1,0 +1,77 @@
+---
+description: GitHub Project Update and Optimization Rule
+globs: ["**/*"]
+---
+
+# GitHub Project Update Rules
+
+## Text Conversion and Encoding
+- Convert all Simplified Chinese characters to Traditional Chinese
+- Fix any encoding issues (UTF-8 encoding required)
+- Ensure proper display of Chinese characters
+
+## Package Management and Dependencies
+- Update all outdated packages to stable versions
+- Check for package dependency conflicts
+- Remove unused packages
+- Ensure package version compatibility
+- Update dependency files (composer.json/package.json/requirements.txt)
+- Document major version changes and updates
+
+## Documentation Management
+- Maintain up-to-date README.md file
+- Create README.md if not exists with standard sections:
+  - Project description
+  - Installation instructions
+  - Usage guide
+  - Configuration details
+  - Dependencies list
+  - Contributing guidelines
+  - License information
+- Keep changelog in README.md or CHANGELOG.md
+- Document all version updates with:
+  - Version number
+  - Release date
+  - Changes made
+  - Breaking changes
+  - New features
+  - Bug fixes
+- Sync documentation with code changes
+- Maintain multilingual documentation if needed
+
+## Code Quality and Documentation
+- Add Traditional Chinese comments to explain code functionality
+- Fix code syntax errors and bugs
+- Implement best practices for code structure
+- Maintain consistent code style and indentation
+
+## Code Formatting
+- Proper indentation (2 spaces for most languages)
+- Consistent line breaks
+- Remove trailing whitespace
+- Organize imports and dependencies
+
+## File Organization
+- Ensure proper file structure
+- Maintain clear file naming conventions
+- Update documentation files (README, etc.)
+
+## Specific Tasks
+1. Convert Simplified Chinese to Traditional Chinese
+2. Fix encoding issues and ensure correct text display
+3. Check and fix code errors
+4. Add Traditional Chinese comments for code documentation
+5. Optimize code formatting and structure
+6. Update outdated packages and ensure compatibility
+7. Update or create README.md with changes
+8. Document version updates in changelog
+
+## Implementation Notes
+- Use UTF-8 encoding for all files
+- Follow language-specific style guides
+- Document all major changes
+- Maintain version control history
+- Regular package update checks
+- Set up package update testing environment
+- Follow semantic versioning (MAJOR.MINOR.PATCH)
+- Keep documentation synchronized with code changes

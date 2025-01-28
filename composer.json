@@ -1,0 +1,24 @@
+{
+    "name": "saojsm/onemanager-php",
+    "description": "An index & manager of Onedrive based on php.",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "doctrine/cache": "^2.2.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SAOJSM"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+} 

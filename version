@@ -1,0 +1,150 @@
+20220127-1234.43
+<font color="red">change login page, default not '?admin' but '?login=admin' now! and if set adminloginpage, it will be '?login=[value]'.</font> rm JumpFirstDisk, 403 in operating root, change sorting disk, remake disktags tab, add global md config. Allow Preview when enable downloadencrypt. some change in adding Onedrive disk. show upload progress in table background. fix some bugs.
+<font color="red">更改登入地址，預設不再是'?admin'而是'?login=admin'，如果設置了adminloginpage，那登入地址會是'?login=值'。</font>移除 JumpFirstDisk，在root操作時返回403，更改磁碟排序，重做磁碟符排列，添加全局md配置。在開啟downloadencrypt後可以網頁預覽了。添加onedrive磁碟時稍做修改。上傳時以背景做進度條。修復其它bug。
+
+20211220-1100.42
+Add new platform Replit. Add a git source for update. sha1.js use jsdelivr cdn. fix some bugs.
+新增Replit平台。新增國內git源，以後國內可以選擇從HIT源更新。sha1.js換成jsdelivr CDN。修復bug。
+20211201-1602.41
+add a latent function, you can edit platform token(or API key) via '?setup=auth' when the token invalid, not need edit it in Environment(or Config Var) manually, (even in Vercel, config saved in file, and can't modiy it manually).
+新增隱藏功能，在平台操作代碼的token或API key失效時，可以在 '?setup=auth' 修改它，不用去環境變數修改了（特別地，Vercel保存在代碼中時都改不到）。
+20211129
+check if there is another deployment building when start deploy.
+Vercel部署時檢測是否有另一個部署。
+20211104
+check if exist php-curl or not in php host and VPS.
+在VPS中檢測是否有php-curl。
+20211021
+specialchars, fix: list folder, encrypt folder, preview files, rename, show in title, error on back link after login at specialchars folder, etc.
+針對特殊字符，解決目錄的列表，目錄的加密，文件的預覽，目錄與文件重命名，在網頁標題的顯示，在特殊字符處登入後跳轉出錯等問題。
+20211006
+oprate files by fileID, write a localStorage when login to anti CSRF.
+管理時對文件id操作，管理登入時寫入一個localStorage預防CSRF。
+20210908
+add fileConduitSize&fileConduitCacheTime, little files can stream from program, better to show html/js as local file.
+增加fileConduitSize，fileConduitCacheTime，小文件可以從伺服器中轉，以對html/js本地化更好的支持。
+20210903
+add a latent function, you can run some command by '?setup=cmd', be care, please dont try "top", and set times by "ping -c 4".
+新增隱藏功能，你可以透過'?setup=cmd'來跑一些命令，注意不要試圖跑top，另外ping請-c設置次數。
+20210820-1810.40
+because Vercel must redeploy after change Environment Variables, and it must <4k, so decide that, save config in code file. <font color=red>in Vercel, after update, please install again. if you want continue use Environment, please add a ( name: "ONEMANAGER_CONFIG_SAVE", value: "env" ) in Environment Variables in Project Settings before update.</font>
+因為Vercel修改環境變量也必須重新部署才生效，而且環境變量只能小于4k，所以決定將配置保存在代碼文件中。<font color=red>升級更新後，用Vercel的請重新安裝。如果還想繼續使用環境變量，請在更新前，在Project Settings的Environment Variables中，新增一個( name: "ONEMANAGER_CONFIG_SAVE", value: "env" )的環境變量。</font>
+20210817-2030.39
+fix bugs in Vercel. add wait function in operating. change update method in SCF. add payme in readme.
+修復一些Vercel上的bug。在操作完後添加等待功能，確認平台已經準備好了。SCF的更新方式改變。在readme中添加討飯連結。
+20210804-1535.38
+try fix "&"/"&amp;" in filename. try show an img too height. change upload chunk size when upload speed>10M/s. fix forceHttps when custom domain in Glitch. fix ionicons svg lost.try use file id when rename. background (or other) based on width/height not only width. fix some bugs. Pre-Add platform Vercel, just wait bugs fixed.
+嘗試修復文件名含 "&"/"&amp;"。嘗試在一屏內顯示過長的圖片。上傳時分割的塊大小隨著上傳速度改變。修復Glitch中使用自定義域名時forceHttps問題。修復ionicons圖標失踪。嘗試在重命名時使用file id來操作。背景（或其它）基於長寬來看是豎屏還是橫屏，不再只看寬度。修復其它bug。預加入Vercel平台，等修復bugs。
+20210512-1648.37
+add setting "forceHttps", can force 302 jump to https. fix preview office files. fix manage in safari.fix disktag can be "home". fix some bugs.
+新增一個設置，可以強制跳轉https。修復office文件預覽。修復safari上點不了管理。盤的標籤可以是home了，隨便命名了。修復一些其它問題。
+20210331-1530.36
+admin can only use classic theme after admin login, and guest can not change theme now. fix: Sharelink can not work in php8. show disk space. limit 5 files in uploading. do with activityLimitReached. fix some bugs.
+暫時解決昨天阿里雲盤最新防盜鏈。管理登入後只能用classic主題，遊客不能再切換主題了。修復Sharelink在php8下不能正常工作。顯示盤空間。同時上傳文件數限制5個。對activityLimitReached稍微處理。修復一些bug。
+20210313-1352.35
+use driveId, after update, <font color="red">Aliyundrive and Googledrive please click the Change link after Driver type</font>. try fix: php8 will run error 500. change layout in settup. fix: uploading non-englist file name. try fix: sha1 a big file.
+換用driveId，更新後<font color="red">Aliyundrive與Googledrive請點一下那個切換連結</font>。嘗試修復php8的500 ERROR。改變設置頁面的布局。修復上傳中文名文件時最終文件以url代碼命名。阿里雲盤上傳時可以sha1大文件了。
+20210311-2004.34
+try fix: can not login, sha1.js not loaded(changed a cdn), show error log.
+嘗試修復登入不了的情況：可能sha1.js沒有載入（換了源），在登入頁面上顯示出錯信息。
+20210309-1718.33
+Googledrive can operate now, but the uploading can not done on explorer without token. Onedrive try deal with activeLimit. Can change admin password now. Admin password will sha1 when submitting. Fix some bugs.
+Googledrive可以管理操作了，但因為沒法在瀏覽器端不帶token上傳，所以上傳操作作罷。Onedrive嘗試處理activeLimit。可以修改admin密碼了。登入等提交admin密碼時，會sha1加密再提交。修復一些bug。
+20210301-1745.32
+Onedrive client secret extend. export&import config. adding Googledrive. add reffer: only listing domains can refer.  add diskDescription: tips of disk. Heroku change function_name to HerokuappId. try fix domainforproxy. fix create in Aliyundrive. fix other bugs.
+Onedrive 的client延期。可以導入導出配置了。初步添加Googledrive。添加reffer：只有指定域名能引用。添加diskDescription：可以對盤備注了。Heroku中將function_name改為使用HerokuappId。嘗試修復domainforproxy在個人帳號時的問題。修復阿里雲盤不能新建與加密。修復其它bug。
+20210118-1600.31
+can change Ondrive to Sharepoint, can copy a disk. fix a bug that 500 error in setup.
+Onedrive跟Sharepoint可以切換了，可以複製一個盤。修復bug。
+20210115-1111.30
+<font color=red>v3, after update, please AddDisk again, please set passfile again.</font> themes of php deleted, or you can use branch v2_last.
+<font color=red>v3，一键升級後請重新添加盤，passfile失效，重新設置。</font>php主題刪掉了，要么就用v2_last分支。
+20201229.29
+Modify tags, change sequence of disk.
+可以修改標籤，移動標籤順序。
+20201215-1400.28
+fix: hackers can upload files to ANY folder (or create a new folder) in your Onedrive. add language zh-tw. now, on heroku, xhr can post. fix: 2 or more space in file name cause bugs.
+修復：構造代碼後可以上傳文件到你Onedrive的任意目錄（甚至創建新目錄）。新增zh-tw語言。xhr的post在heroku會接收了，改回post。修復：文件名有個多空格相連時造成bug。
+20201106-1730.27
+Add theme. A code used in CloudFlare Workers. Admin not need password in folder. Add caddy2 rewrite rule. Add new platform Glitch. <font color=red>web hosting and VPS user should backup your config.php, after update, copy it to .data foloder.</font>
+添加主題。添加一段用於CF workers的代碼。加密目錄管理員不需要密碼了。添加caddy2偽靜態。新增Glitch平台。<font color=red>虛擬主機與VPS用戶請備份config.php，升級後，手動將它覆蓋到.data目錄。</font>
+20200828-1420.26
+nginx rewrite rule exclude .well-known folder, as auto SSL. add web.config to rewrite in IIS. now in windwos can do with \ in path. in aliyun FC & huawei FG API, use my code. CN 21Vianet client_id&secret expire. update description now only show new.
+nginx的偽靜態中排除.well-known目錄，方便自動SSL。添加IIS的偽靜態。與linux不同，處理windows下目錄用\分隔。FC、FG中使用自己代碼對接平台。<font color=red>世紀互聯舊API即將過期失效，升級後世紀互聯的盤需要刪除重新添加。</font>更新說明只顯示部分。
+20200817-1740.25
+when multy disks, now will default show disks as folders in root, if set autoJumpFirstDisk 1, it will auto jump to first disk.
+多盤時，在網站根目錄，默認會將各盤當成文件夾顯示，可以去設置中設置autoJumpFirstDisk為1，這樣可以跟以前一樣自動跳到第一個盤。
+20200816-1145.24
+add platform: Baidu CFC. add setting: mobile background.
+新增百度CFC平台。可以分別設置PC與手機的背景。
+20200808-1130.23
+FG: select save in env or file.
+在FG中安裝時，選擇配置保存在環境變量還是文件中。
+20200806-1130.23
+SCF: select save in env or file.
+在SCF中安裝時，選擇配置保存在環境變量還是文件中。
+20200804-1453.22
+fix: once error will stop the after files in uploading multy files. SCF can get region now, change install. SCF config save in code file now not in env, <font color=red>if use SCF, you must reinstall after update</font>.
+修復，當上傳多個文件時，一個文件出錯將導致後續文件不再上傳。SCF可以獲取到region了，安裝過程修改。在SCF中，現在將配置保存到代碼文件中，不受環境變量4K大小限制，<font color=red>升級後，用SCF的要重裝</font>。
+20200723-1430.21
+fix content-type in "?json". can not custom microsoft API id & secret by a link now, so show the return uri.
+當使用"?json"時，現在content-type是json了。現在微軟不能一键創建API應用，提供回调URI。
+20200713-1800.20
+add platform: Huawei cloud Function Graph. now you can use "?json" to get a json of folder or file. fix some bug.
+新增白嫖平台：華為雲函數工作流FG。可以用"?json"來獲得目錄或文件的json。修復bug。
+20200607-1856.19
+add platform: Aliyun Function Compute. add setting: replace sharepoint.com to a proxy server name. add setting: disableShowThumb,customTheme. add function: php hosting website can update by a click
+現在可以安裝到阿里函數計算FC了。php空間可以一键更新了。可以設置某個盤替換sharpoint.com域名為你的反代域名。新增disableShowThumb,customTheme。
+20200503-1848.18
+Rebuild theme. Add custom Css & custom Script, add FunctionalityFile: head.omf & foot.omf.
+重建主題文件結構。增加自定義css與自定義script。增加2個功能文件：head.omf、foot.omf。
+20200402-1830.17
+Oneclick update can select which branch to update. Now use the accept language instead of the language config.
+一键更新可以选择哪個分支了。現在開始使用瀏覽器語言，拋棄language設置。
+20200326-0001.16
+You can add sharepoint site drive as a disk, <font color=red>you must reinstall after update</font>.
+可以将sharepoint網站添加成一個盤，<font color=red>由於結構改變，升級後只能重裝</font>。
+20200321-1830.15
+本次更新後，'index.html'功能在其它主題會導致bug。
+文本類文件將緩存；添加hideFunctionalityFile開關；在添加網盤時會顯示已經在用的標籤。
+after this update, then 'index.html' function will bug in other theme.
+cache text file content;add hideFunctionalityFile;list exist disktags when AddDisk。
+20200311-2150.14
+Add a switch, can download a known file or not, while the folder is encrypted.
+Hide time and size in mobile.
+Now, you can get a random 'jpg' from a folder when you type '?random=jpg' after the folder.
+增加一個開關，在目錄加密後能否下載其中的某個文件。
+在手機上瀏覽時，隱藏修改時間跟大小。
+加入一個功能，現在可以在某個目錄後面加上'?random=jpg'來得到本目錄裡面的一張隨機jpg。
+20200229-1300.13
+In SCF, some config can input Special symbols now, like ?&= 。
+在SCF中，某些配置可以輸入特殊符號了，像background可以用?&=之类的了。
+20200225-1310.12
+Can update by one click any time. fix bugs: special tag, reupload.
+可以不管版本直接一键更新（覆蓋）了。修復可以使用特殊onedrive標籤的bug，修復斷網續傳的問題。
+20200222-2130.11
+you can set background now. fix bug: 2nd disk upload.
+可以設置背景圖片了。第2個盤上傳後連接不對。
+20200222-1700.09
+Can copy file and folder now.
+可以複製文件跟目錄了。
+20200220-1220.08
+Multy Mode! You can add more Onedrive in one project (bind Onedrive in setup). And now, heroku apps can update in setup!  
+多盤來了，在設置中添加Onedrive，另，heroku 上也能一键更新了！  
+20200215-1850.07
+fix: head.md not show if no readme.md.
+修復當沒有readme的時候就不顯示head的問題。
+20200215-1700.06
+classic theme can read the head.md file now.
+classic主題可以處理head.md文件了。
+20200202-2010.05
+refresh token expires in 90 day, save a new token per month. classic theme add some icon for admin.
+refresh token 90天過期，所以每月保存一個新的token。classic主題加了點管理圖標。
+20200129-2050.04
+if there is 'index.html', then do not show file but show the index.html, except admin.
+如果有index.html，就不顯示文件列表了，直接顯示index.html內容，除非是管理員。
+20200120.02
+fix domain_path do not work. domain_path正常工作了。
+20200118.01
+Can be deploy to heroku/SCF/normal space. SCF、heroku、普通VPS，三種環境都可以用了。
+Change imgup_path to guestup_path, plz make sure it after update. 將imgup_path改成guestup_path更符合用途，更新後請注意更改。

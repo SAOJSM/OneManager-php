@@ -1,12 +1,5 @@
 [繁體中文 readme](readme_tw.md)  
 
-# Version Update Log
-
-## 2024-03-21
-- Updated minimum PHP version requirement to 8.1
-- Updated doctrine/cache package to 2.2.1
-- Optimized code structure and dependency management
-
 # NOTICE: 
 
   The Releases is used as archive, not newest code.  
@@ -136,3 +129,12 @@ B:
 ### foot.omf
 
   it will showed at top or bottom as html (javascript works!). 
+
+----
+
+# Version Update Log
+
+## 2024-03-21
+- Updated minimum PHP version requirement to 8.1
+- Updated doctrine/cache package to 2.2.1
+- Optimized code structure and dependency management
